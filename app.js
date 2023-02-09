@@ -13,40 +13,44 @@ let clickElem = document.querySelectorAll(".clickME");
 let informationArray = [
   {
     name: "Metti",
-    profile: "#1111",
-    preview: "lorem ipusm salama dashsa",
+    profile: "#2233",
+    preview: "lorem ipusm salama",
     username: "Mettiu22",
     num: "0915***5555",
     src: "ZZZ",
     active: "active",
-    profiles: ["slide1.jpg", "slide2.png", "slide3.png"],
+    sliders: ["imgs/img1.jpg", "imgs/img2.jpg"],
   },
   {
     name: "Mahyar",
     profile: "#2244",
-    preview: "lorem ipusm salama dashsa",
+    preview: "lorem ipusm salama",
     username: "MahyarOsix",
     num: "0915***3333",
     src: "ZZZ",
-    profiles: ["slide4.jpg", "slide5.png", "slide6.png"],
+    sliders: ["imgs/img3.jpg", "imgs/img4.jpg"],
   },
   {
     name: "Yasin",
     profile: "#9399",
-    preview: "lorem ipusm salama dashsa",
+    preview: "lorem ipusm salama",
     username: "Yasin1216",
     num: "0915***2222",
     src: "ZZZ",
+    sliders: ["imgs/img5.jpg", "imgs/img6.jpg"],
   },
   {
     name: "Ali ",
     profile: "#2422",
-    preview: "lorem ipusm salama dashsa",
+    preview: "lorem ipusm salama",
     username: "Ali-king",
     num: "0915***4444",
     src: "ZZZ",
+    sliders: ["imgs/img7.jpg", "imgs/img8.jpg"],
   },
 ];
+console.log(informationArray[0].profile);
+
 let chatNameElem = document.querySelector(".chat-name");
 let chatProfileElem = document.querySelector(".chat-profile");
 let today = new Date();
@@ -98,6 +102,8 @@ let closeEditProfileBtn = document.querySelector(".close-editProfile");
 // profile slider
 let perSliderBtn = document.querySelector(".per-btn");
 let nxtSliderBtn = document.querySelector(".nxt-btn");
+// onload
+let profileImgsArray = informationArray[0].sliders;
 
 // create Message
 function checkKey(event) {
@@ -226,15 +232,9 @@ function setProfileInformation(targetClickedArray) {
 }
 
 //profile slider
-let targetSlides;
 function changeSlider(targetClickedArray) {
-  targetSlides = targetClickedArray.profiles;
-
-  setSliderBG(targetSlides);
-}
-
-function setSliderBG(targetSlides) {
-  console.log(targetSlides);
+  profileImgsArray = targetClickedArray.sliders;
+  nxtSlideHandler(profileImgsArray);
 }
 
 let x = 0;
@@ -456,7 +456,6 @@ function setChangesOnProfile() {
   informationArray[0].name = editUserNameInpt.value;
   informationArray[0].preview = editAboutInpt.value;
   informationArray[0].username = editUserNameInpt.value;
-  // console.log(informationArray[0]);
   setProfileInformation(informationArray[0]);
 }
 //show edit
@@ -466,6 +465,17 @@ function showEditWrapper() {
 
 function closeEditWrapper() {
   editProfileContainerElem.style.transform = "translateX(-430px)";
+}
+
+// profile slider
+let sildeCounter = 0;
+function nxtSlideHandler() {
+  sildeCounter++;
+  if (sildeCounter > profileImgsArray.length - 1) {
+    sildeCounter = 0;
+  }
+  let nowImg = profileImgsArray[sildeCounter];
+  profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
 }
 
 messageInpt.addEventListener("keydown", checkKey);
