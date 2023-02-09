@@ -477,6 +477,7 @@ function nxtSlideHandler() {
   let nowImg = profileImgsArray[sildeCounter];
   profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
 }
+
 function perSlideHandler() {
   sildeCounter--;
   if (sildeCounter < 0) {
