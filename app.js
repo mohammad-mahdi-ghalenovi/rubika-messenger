@@ -49,7 +49,6 @@ let informationArray = [
     sliders: ["imgs/img7.jpg", "imgs/img8.jpg"],
   },
 ];
-console.log(informationArray[0].profile);
 
 let chatNameElem = document.querySelector(".chat-name");
 let chatProfileElem = document.querySelector(".chat-profile");
@@ -234,24 +233,8 @@ function setProfileInformation(targetClickedArray) {
 //profile slider
 function changeSlider(targetClickedArray) {
   profileImgsArray = targetClickedArray.sliders;
-  nxtSlideHandler(profileImgsArray);
-}
-
-let x = 0;
-function nxtSlideHandler() {
-  x++;
-  if (x > targetSlides.length) {
-    x = 1;
-  }
-  console.log(targetSlides[x - 1]);
-}
-
-function perSlideHandler() {
-  x--;
-  if (x < 1) {
-    x = targetSlides.length;
-  }
-  console.log(targetSlides[x - 1]);
+  profileImgContainer.style.backgroundImage =
+    "url(" + targetClickedArray.sliders[0] + ")";
 }
 
 // loading
@@ -485,8 +468,6 @@ function perSlideHandler() {
   }
   let nowImg = profileImgsArray[sildeCounter];
   profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
-
-  console.log(sildeCounter);
 }
 
 messageInpt.addEventListener("keydown", checkKey);
