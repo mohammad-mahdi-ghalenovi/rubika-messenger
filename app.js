@@ -477,6 +477,16 @@ function nxtSlideHandler() {
   let nowImg = profileImgsArray[sildeCounter];
   profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
 }
+function perSlideHandler() {
+  sildeCounter--;
+  if (sildeCounter < 0) {
+    sildeCounter = profileImgsArray.length - 1;
+  }
+  let nowImg = profileImgsArray[sildeCounter];
+  profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
+
+  console.log(sildeCounter);
+}
 
 messageInpt.addEventListener("keydown", checkKey);
 sendBtn.addEventListener("click", createMessage);
