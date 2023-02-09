@@ -1,0 +1,110 @@
+.editProfile-container {
+  position: absolute;
+  display: grid;
+  background-color: var(--dark-theme);
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 150px repeat(3, 80px) 90px 120px;
+  text-align: center;
+  height: 100%;
+  width: 430px;
+  transform: translateX(-430px);
+  z-index: 999;
+}
+
+.edit-profile-img {
+  position: relative;
+  top: 15px;
+  grid-row: 2/3;
+  background-color: rgb(64, 64, 11);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  justify-self: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.edit-inputs {
+  position: relative;
+  height: 50px;
+  width: 320px;
+  justify-self: center;
+  border-radius: 14px;
+  border: 1px solid gray;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.edit-inputs:hover {
+  border-color: var(--purple-theme);
+}
+
+.change-edit-submit {
+  background-color: rgb(57, 212, 57);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  justify-self: center;
+  box-shadow: 0 0 9px;
+  cursor: pointer;
+}
+
+.edit-change-username-container {
+  grid-row: 6/7;
+}
+
+.edit-username-title {
+  color: var(--purple-theme);
+  padding-right: 180px;
+  padding-bottom: 8px;
+}
+
+.edit-details {
+  padding: 12px 10px;
+  color: var(--dark-color);
+}
+
+/* header */
+.editProfile-header {
+  display: grid;
+  grid-template-columns: 60px 1fr 50px 20px;
+}
+
+.editProfile-delete {
+  background-color: purple;
+  line-height: 60px;
+}
+
+.editProfile-title {
+  align-self: center;
+  text-align: start;
+  padding-left: 8px;
+  font-size: 23px;
+}
+
+.close-editProfile {
+  border-radius: 50%;
+  scale: 0.8;
+  border: none;
+}
+
+.change-edit-submit {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+@media screen and (max-width: 1470px) {
+  .editProfile-container {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .editProfile-container {
+    width: 390px;
+  }
+  .editProfile-container {
+    /* change !  */
+    font-size: 15px;
+  }
+}

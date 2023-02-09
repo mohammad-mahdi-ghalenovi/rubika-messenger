@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="list.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="stylesheet" href="setting.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="edit-profile.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- header -->
+      <div class="search-header">
+        <div class="ham-btn">|||</div>
+        <input type="text" class="search" placeholder="Search" />
+        <div class="chat-selector">All</div>
+      </div>
+
+      <div class="ham-menu menu-num1" style="z-index: -1">
+        <li>
+          Saved Messages
+          <div class="li-icons"></div>
+        </li>
+        <li>
+          Contacts
+          <div class="li-icons"></div>
+        </li>
+        <li id="3">
+          Setting
+          <div class="li-icons"></div>
+        </li>
+        <li class="dark-elem" id="4">
+          Themes
+          <div class="theme-container">
+            <span id="red" class="theme"></span
+            ><span id="green" class="theme"></span
+            ><span id="purple" class="theme"></span
+            ><span id="blue" class="theme"></span>
+          </div>
+          <div class="li-icons"></div>
+        </li>
+        <li id="5">
+          Dark Mode
+          <div class="li-icons"></div>
+        </li>
+        <div class="details">(ver 1.1 )</div>
+      </div>
+
+      <!-- contactList -->
+      <div class="contact-container"></div>
+
+      <!-- headerChat -->
+      <div class="chat-header">
+        <div class="chat-profile"></div>
+        <div class="chat-name">Metti</div>
+        <div class="chat-search"></div>
+        <div class="chat-ham"></div>
+      </div>
+
+      <!--main chat -->
+      <section class="chat-main-container">
+        <div class="message-input-container">
+          <input
+            class="message-inpt"
+            placeholder="type Message..."
+            type="text"
+          />
+          <div class="input-btn message-emoji-btn"></div>
+          <div class="input-btn message-file-btn"></div>
+        </div>
+        <button class="send-btn"></button>
+        <div class="ham-menu menu-num2">
+          <li>
+            Mute
+            <div class="li-icons"></div>
+          </li>
+          <li>
+            Choose Messages
+            <div class="li-icons"></div>
+          </li>
+          <li>
+            Block User
+            <div class="li-icons"></div>
+          </li>
+          <li>
+            Delete conversation
+            <div class="li-icons"></div>
+          </li>
+          <li>
+            Delete History
+            <div class="li-icons"></div>
+          </li>
+        </div>
+      </section>
+      <div class="messages">
+        <div class="loading"></div>
+      </div>
+      <!-- end of MainContainer -->
+    </div>
+
+    <!-- Setting -->
+    <div class="setting-container">
+      <div class="setting-header">
+        <button class="close-setting">close</button>
+        <div class="setting-title">Setting</div>
+        <div class="setting-delete">||||</div>
+      </div>
+
+      <div class="setting-img-container"></div>
+
+      <div class="setting-information-container">
+        <div class="setting-info setting-num">
+          <div class="info-icons"></div>
+          <div class="info set-num">09307041730</div>
+          <div class="smal-title">Number</div>
+        </div>
+        <div class="setting-info setting-user">
+          <div class="info-icons"></div>
+          <div class="info set-name">Mettiue</div>
+          <div class="smal-title">Usename</div>
+        </div>
+        <div class="setting-info setting-bio">
+          <div class="info-icons"></div>
+          <div class="info set-bio">always on top</div>
+          <div class="smal-title">About</div>
+        </div>
+      </div>
+      <div class="setting-buttons">
+        <div class="s-button">
+          <div class="buttons-icons"></div>
+          <div class="button-title show-edit">Edit profile</div>
+        </div>
+        <div class="s-button">
+          <div class="buttons-icons"></div>
+          <div class="button-title">Folders</div>
+        </div>
+        <div class="s-button">
+          <div class="buttons-icons"></div>
+          <div class="button-title">Setting</div>
+        </div>
+        <div class="s-button">
+          <div class="buttons-icons"></div>
+          <div class="button-title">Privecy</div>
+        </div>
+        <div class="s-button">
+          <div class="buttons-icons"></div>
+          <div class="button-title">Language</div>
+        </div>
+      </div>
+    </div>
+    <!-- Setting -->
+    <!-- editProfile -->
+    <div class="editProfile-container">
+      <div class="editProfile-header">
+        <button class="close-editProfile">close</button>
+        <div class="editProfile-title">Edit Profile</div>
+        <div class="editProfile-delete">||||</div>
+      </div>
+
+      <div class="edit-profile-img"></div>
+
+      <input type="text" class="edit-inputs edit-name" placeholder="Name" />
+      <input type="text" class="edit-inputs edit-lname" placeholder="Lname" />
+      <input type="text" class="edit-inputs edit-about" placeholder="About" />
+
+      <div class="edit-change-username-container">
+        <div class="edit-username-title">Change UserName</div>
+        <input
+          type="text"
+          class="edit-inputs edit-username"
+          placeholder="UserName"
+        />
+      </div>
+
+      <div class="edit-details">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore modi
+        iste est quisquam, laboriosam laborum, nisi facere dicta ratione qui
+      </div>
+
+      <div class="change-edit-submit">\-/</div>
+    </div>
+    <!-- editProfile -->
+    <!-- profile preview -->
+    <div class="profile-container">
+      <div class="profile-header">
+        <button class="close-profile2">close</button>
+        <div class="profile-title">Profile</div>
+        <div class="profile-delete">||||</div>
+      </div>
+
+      <div class="slider-container">
+        <div class="per-btn btn-slide-handler">previous</div>
+        <div class="profile-img-container"></div>
+        <div class="nxt-btn btn-slide-handler">next</div>
+      </div>
+
+      <div class="profile-information-container">
+        <div class="profile-info profile-num">
+          <div class="info-icons"></div>
+          <div class="info p-num">09307041730</div>
+          <div class="smal-title2">Number</div>
+        </div>
+        <div class="profile-info profile-user">
+          <div class="info-icons"></div>
+          <div class="info p-name">Mettiue</div>
+          <div class="smal-title2">Usename</div>
+        </div>
+        <div class="profile-info profile-bio">
+          <div class="info-icons"></div>
+          <div class="info p-bio">always on top</div>
+          <div class="smal-title2">About</div>
+        </div>
+        <div class="profile-info profile-notifications">
+          <div class="info-icons"></div>
+          <div class="info">Notifications</div>
+          <button class="notifications-btn">ON</button>
+        </div>
+      </div>
+      <div class="profile-media-container">
+        <div class="profile-media-header">
+          <div class="media-heads profile-media">Media</div>
+          <div class="media-heads profile-files">File</div>
+          <div class="media-heads profile-music">Music</div>
+          <div class="media-heads profile-voice">Voice</div>
+        </div>
+        <div class="profile-main-medias">
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+          <div class="test-img"></div>
+        </div>
+      </div>
+    </div>
+    <!-- context menu -->
+    <div class="context-menu" style="z-index: -1">
+      <li>
+        Replay
+        <div class="context-icons"></div>
+      </li>
+      <li>
+        Edit
+        <div class="context-icons"></div>
+      </li>
+      <li>
+        Pin
+        <div class="context-icons"></div>
+      </li>
+      <li>
+        Forward
+        <div class="context-icons"></div>
+      </li>
+      <li>
+        Select
+        <div class="context-icons"></div>
+      </li>
+      <li>
+        Delete
+        <div class="context-icons"></div>
+      </li>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
+<!--  change the darktheme color && change first contact to saved messages  &&  profile img slider!  &&  900px to mobile -->

@@ -1,0 +1,147 @@
+.setting-container {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 60px 240px 8px 225px 60px 1fr;
+  width: 430px;
+  height: 120vh;
+  left: 0;
+  text-align: center;
+  background-color: var(--dark-theme);
+  color: var(--dark-color);
+  transform: translateX(-430px);
+  transition: 0.3s ease;
+  z-index: 99;
+  overflow-y: scroll;
+}
+
+/* header */
+.setting-header {
+  display: grid;
+  grid-template-columns: 60px 1fr 50px 20px;
+}
+
+.setting-delete {
+  background-color: purple;
+  line-height: 60px;
+}
+
+.setting-title {
+  align-self: center;
+  text-align: start;
+  padding-left: 8px;
+  font-size: 23px;
+}
+
+.close-setting {
+  border-radius: 50%;
+  scale: 0.8;
+  border: none;
+}
+
+/* img */
+.setting-img-container {
+  grid-row: 2/3;
+  background-color: aqua;
+  background-position: center;
+  background-size: cover;
+}
+
+/* information */
+.setting-information-container {
+  grid-row: 4/5;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: repeat(3, 70px);
+  padding: 0 2px;
+}
+
+.setting-info {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10px 50px 1fr 120px;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.setting-info:hover,
+.s-button:hover {
+  background-color: var(--hover-color);
+}
+
+.setting-info .info-icons {
+  height: 50px;
+  width: 50px;
+  background-color: var(--hover-color);
+  border-radius: 50%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+}
+
+.setting-info .info {
+  grid-column: 3/4;
+  font-size: 18px;
+  text-align: left;
+  align-self: center;
+  padding-left: 15px;
+}
+
+.smal-title {
+  grid-column: -1/-2;
+  grid-row: 1/2;
+  align-self: flex-end;
+  font-size: 13px;
+  padding-left: 30px;
+  padding-bottom: 2px;
+  color: gray;
+}
+
+/* buttons */
+.setting-buttons {
+  grid-row: -1/-2;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-rows: repeat(5, 65px);
+  padding: 0 9px;
+}
+
+.s-button {
+  display: grid;
+  border-radius: 10px;
+  grid-template-columns: 10px 50px 1fr 120px;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.button-title {
+  font-size: 18px;
+  text-align: left;
+  align-self: center;
+  padding-right: 30px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  padding-left: 15px;
+}
+
+.buttons-icons {
+  height: 50px;
+  width: 50px;
+  background-color: var(--hover-color);
+  border-radius: 50%;
+  align-self: center;
+  grid-column: 2/3;
+}
+
+@media screen and (max-width: 1470px) {
+  .setting-container {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .setting-container {
+    width: 390px;
+  }
+  .setting-info div.info {
+    font-size: 15px;
+  }
+}

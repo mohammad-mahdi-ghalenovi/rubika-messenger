@@ -1,0 +1,308 @@
+.search-header {
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 55px 1fr;
+  background-color: var(--dark-theme);
+  z-index: 9;
+}
+
+.search-header::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--purple-theme);
+  z-index: 99;
+  border-radius: 5px;
+}
+
+.search-header input.search {
+  position: relative;
+  grid-column: 2/3;
+  border-radius: 50px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  top: 5px;
+  height: 44px;
+  width: 95%;
+  align-self: center;
+  padding: 0 40px;
+  border: none;
+  background: var(--dark-theme);
+  border: 2px solid transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 0.5s;
+  color: var(--dark-color);
+}
+
+.search-header .search:focus {
+  outline: none;
+  border-color: var(--purple-theme);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ham-btn {
+  position: absolute;
+  grid-column: 1/2;
+  color: var(--dark-color);
+  align-self: center;
+  left: 20px;
+  top: 12px;
+  font-size: 28px;
+  rotate: 90deg;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.animated-btn {
+  rotate: 10deg;
+  font-size: 20px;
+}
+
+.chat-selector {
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  align-self: flex-end;
+  margin-left: 15px;
+  padding-bottom: 10px;
+  color: var(--purple-theme);
+  font-size: 16px;
+  border-bottom: 3px solid var(--purple-theme);
+  transition: 0.4s;
+}
+
+/* start contact-elem */
+
+.contact-container {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  padding: 0 2px;
+  padding-top: 5px;
+  display: grid;
+  grid-template-rows: repeat(4, 70px);
+  grid-auto-rows: 70px;
+  grid-gap: 5px;
+  background-color: var(--dark-theme);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.contact-container .contact-elem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 1fr;
+  cursor: pointer;
+}
+
+.clickME {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  border-radius: 10px;
+  transition: 0.2s all;
+}
+
+.clickME:hover {
+  /* background-color: rgba(0, 0, 0, 0.039); */
+  background-color: var(--hover-color);
+}
+
+.contact-container .contact-elem .clickME.selected {
+  /* JS */
+  background-color: #9926fd2f;
+}
+
+.contact-container .contact-profile {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-position: center;
+  background-size: cover;
+  background-color: #a555ec;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  align-self: center;
+  justify-self: center;
+  z-index: 9;
+}
+
+.contact-container .contact-informations {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(20px) 1fr;
+  height: 100%;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: -1/-2;
+  padding-left: 9px;
+}
+
+.contact-name {
+  text-align: start;
+  align-self: flex-end;
+  color: var(--dark-color);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.contact-preview {
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.contact-unRead {
+  position: absolute;
+  right: -2.5%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background-color: var(--purple-theme);
+  color: white;
+  border-radius: 40px;
+  font-size: 10px;
+  width: auto;
+  padding: 2.5px 8px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.time {
+  top: 10px;
+  position: absolute;
+  right: 10px;
+  font-size: 10px;
+  color: var(--dark-color);
+}
+/* ham menu */
+.ham-menu {
+  background-color: var(--dark-theme);
+  color: var(--dark-color);
+  position: absolute;
+  display: grid;
+  padding-top: 20px 0;
+  grid-template-rows: repeat(5, 60px) 30px;
+  text-align: start;
+  width: 230px;
+  transform: translateY(-10px);
+  border-radius: 9px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  opacity: 0;
+  transition: 0.2s;
+  /* transform: translateY(-550px);*/
+  z-index: 10;
+}
+
+.menu-num1 {
+  top: 60px;
+  left: 10px;
+}
+
+.ham-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.ham-menu li {
+  position: relative;
+  list-style-type: none;
+  cursor: pointer;
+  border-radius: 9px;
+  padding: 5px 1pc;
+  padding-top: 20px;
+  transition: 0.4s all;
+  height: 100%;
+  width: 100%;
+}
+
+.li-icons {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: var(--purple-theme);
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: -5px;
+  border-radius: 50%;
+}
+
+.details {
+  text-align: center;
+  padding-top: 3px;
+  background-color: rgba(128, 128, 128, 0.29);
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.ham-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.025);
+  color: var(--purple-theme);
+}
+
+.theme-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 60px;
+  width: 200px;
+  right: -99px;
+  top: 50%;
+  background-color: var(--dark-theme);
+  transform: translate(50%, -50%) translateX(-200px);
+  transition: 0.4s all;
+  opacity: 0;
+  z-index: -5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.theme-container span {
+  height: 32px;
+  width: 32px;
+  background-color: purple;
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.theme-container span:nth-child(1) {
+  background: hsl(0, 87%, 56%);
+}
+.theme-container span:nth-child(2) {
+  background: hsl(120, 61%, 50%);
+}
+.theme-container span:nth-child(3) {
+  background: #a555ec;
+}
+.theme-container span:nth-child(4) {
+  background: hsl(183, 66%, 37%);
+}
+
+.active-theme-container {
+  transform: translate(50%, -50%) translateX(0px);
+  opacity: 1;
+}
+
+.active {
+  background-color: var(--active-color);
+}
+
+@media screen and (max-width: 1470px) {
+  .time {
+    right: 5px;
+  }
+}

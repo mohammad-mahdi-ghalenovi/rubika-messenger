@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat ", "Vazirmatn";
+  transition: 0.2s;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  zoom: 0.90;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --dark-theme: rgb(255, 255, 255);
+  --dark-color: black;
+  --purple-theme: #a555ec;
+  --hover-color: rgba(0, 0, 0, 0.098);
+  --linear-theme: rgb(234, 224, 224);
+  --active-color: rgba(0, 0, 0, 0.103);
+}
+
+.main-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 430px repeat(1, 1fr);
+  grid-template-rows: 110px 1fr;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@media screen and (max-width: 1470px) {
+  .main-container {
+    grid-template-columns: 370px repeat(1, 1fr);
+  }
+
+  .contact-container .contact-profile {
+    height: 49px;
+    width: 49px;
+  }
+  .contact-container .contact-informations {
+    padding: 5px;
+  }
+  .contact-name {
+    font-size: 15px;
+  }
+  .contact-preview {
+    font-size: 9px;
+  }
+  .contact-unRead {
+    padding: 0 5px;
+    font-size: 11px;
+  }
+  .chat-name {
+    font-size: 15px;
+  }
+  .chat-profile {
+    height: 38px;
+    width: 38px;
+  }
+  .message-inpt {
+    font-size: 15px;
+  }
+  .search-header input.search {
+    height: 36px;
+    width: 100%;
+    justify-self: center;
+    right: 14px;
+    margin-top: 12px;
+  }
+  .time {
+    padding-right: 2px;
+  }
+}
