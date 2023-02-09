@@ -8,7 +8,7 @@
   text-align: center;
   background-color: var(--dark-theme);
   color: var(--dark-color);
-  transform: translateX(510px);
+  /* transform: translateX(510px); */
   transition: 0.3s ease;
   z-index: 99;
   overflow-y: scroll;
@@ -18,7 +18,7 @@
 .profile-header {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--dark-theme);
   display: grid;
   grid-template-columns: 60px 1fr 50px 20px;
   z-index: 999;
@@ -34,6 +34,7 @@
   text-align: start;
   padding-left: 8px;
   font-size: 23px;
+  color: var(--dark-color);
 }
 
 .close-profile2 {
@@ -89,7 +90,7 @@
   border-radius: 10px;
   display: grid;
   grid-template-columns: 10px 50px 1fr 120px;
-  transition: 0.4s all;
+  transition: 0.2s all;
   cursor: pointer;
 }
 
@@ -143,7 +144,7 @@
   grid-row: 1/2;
   position: sticky;
   top: 61px;
-  background-color: white;
+  background-color: var(--dark-theme);
   display: grid;
   grid-template-columns: repeat(4, 80px);
   align-self: center;

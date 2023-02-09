@@ -112,16 +112,12 @@
   z-index: 9;
   border-radius: 10px;
   transition: 0.2s all;
+  border-left: 7px solid transparent;
 }
 
 .clickME:hover {
   /* background-color: rgba(0, 0, 0, 0.039); */
   background-color: var(--hover-color);
-}
-
-.contact-container .contact-elem .clickME.selected {
-  /* JS */
-  background-color: #9926fd2f;
 }
 
 .contact-container .contact-profile {
@@ -298,7 +294,8 @@
 }
 
 .active {
-  background-color: var(--active-color);
+  border-color: var(--purple-theme);
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1470px) {
