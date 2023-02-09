@@ -112,9 +112,9 @@ function checkKey(event) {
 }
 
 function createMessage() {
+  let inputValue = messageInpt.value;
   if (inputValue !== "") {
     let newMessage = document.createElement("div");
-    let inputValue = messageInpt.value;
     newMessage.textContent = inputValue;
     newMessage.classList.add("newMessage");
 
