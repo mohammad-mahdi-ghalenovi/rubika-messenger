@@ -56,6 +56,7 @@
   background-color: aqua;
   background-position: center;
   background-size: cover;
+  transition: 0s;
 }
 
 .btn-slide-handler {
