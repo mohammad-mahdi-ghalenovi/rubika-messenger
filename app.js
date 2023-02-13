@@ -152,7 +152,7 @@ informationArray.forEach(function (info) {
   createContactElements(info, idCounter);
 });
 
-function createContactElements(info, idCounter) {
+function createContactElements(info, idCounter) { 
   let newContactElemContainer = document.createElement("div");
   newContactElemContainer.classList.add("contact-elem");
 
