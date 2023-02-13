@@ -502,3 +502,4 @@ showEditBtn.addEventListener("click", showEditWrapper);
 closeEditProfileBtn.addEventListener("click", closeEditWrapper);
 perSliderBtn.addEventListener("click", perSlideHandler);
 nxtSliderBtn.addEventListener("click", nxtSlideHandler);
+/// going to a big refactor
