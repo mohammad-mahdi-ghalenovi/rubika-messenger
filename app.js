@@ -1,5 +1,5 @@
 // dynamic contacts
-let MainContactContainer = document.querySelector(".contact-container");
+const MainContactContainer = document.querySelector(".contact-container");
 
 // create message
 let messageInpt = document.querySelector(".message-inpt");
@@ -12,14 +12,16 @@ let i = 0;
 let clickElem = document.querySelectorAll(".clickME");
 let informationArray = [
   {
-    name: "Metti",
+    name: "SavedMessages",
     profile: "#2233",
-    preview: "lorem ipusm salama",
-    username: "Mettiu22",
-    num: "0915***5555",
+    preview: "",
+    username: "Mettiuy",
+    num: "09307041730",
     src: "ZZZ",
     active: "active",
     sliders: ["imgs/img1.jpg", "imgs/img2.jpg"],
+    bio: "always on top",
+    messageCount: "",
   },
   {
     name: "Mahyar",
@@ -29,6 +31,8 @@ let informationArray = [
     num: "0915***3333",
     src: "ZZZ",
     sliders: ["imgs/img3.jpg", "imgs/img4.jpg"],
+    bio: "test bio !!",
+    messageCount: 20,
   },
   {
     name: "Yasin",
@@ -38,6 +42,8 @@ let informationArray = [
     num: "0915***2222",
     src: "ZZZ",
     sliders: ["imgs/img5.jpg", "imgs/img6.jpg"],
+    bio: "test bio !!",
+    messageCount: 20,
   },
   {
     name: "Ali ",
@@ -47,6 +53,8 @@ let informationArray = [
     num: "0915***4444",
     src: "ZZZ",
     sliders: ["imgs/img7.jpg", "imgs/img8.jpg"],
+    bio: "test bio !!",
+    messageCount: 20,
   },
 ];
 
@@ -168,7 +176,7 @@ function createContactElements(info, idCounter) {
   newContactPreview.classList.add("contact-preview");
 
   let newContactUnread = document.createElement("div");
-  newContactUnread.textContent = "178";
+  newContactUnread.textContent = info.messageCount;
   newContactUnread.classList.add("contact-unRead");
 
   let newContactTime = document.createElement("div");
@@ -176,7 +184,6 @@ function createContactElements(info, idCounter) {
   newContactTime.classList.add("time");
 
   // apend
-  MainContactContainer.append(newContactElemContainer);
   newContactElemContainer.append(
     newClickMe,
     newContactProfile,
@@ -185,6 +192,7 @@ function createContactElements(info, idCounter) {
     newContactTime
   );
   newInformationContainer.append(newContactName, newContactPreview);
+  MainContactContainer.append(newContactElemContainer);
 
   newClickMe.id = idCounter;
 }
@@ -218,14 +226,11 @@ function setProfileInformation(targetClickedArray) {
 
     pNameElem.textContent = targetClickedArray.username;
     pNumElem.textContent = targetClickedArray.num;
-    pBioElem.textContent = targetClickedArray.preview;
+    pBioElem.textContent = targetClickedArray.bio;
   }, 200);
 
   chatNameElem.textContent = targetClickedArray.name;
   chatProfileElem.style.backgroundImage = "url(" + targetClickedArray.src + ")";
-
-  setNameElem.textContent = targetClickedArray.name;
-  setBioElem.textContent = targetClickedArray.preview;
 
   changeSlider(targetClickedArray);
 }
@@ -436,10 +441,14 @@ function closeContextMenu() {
 
 // edit profile changes
 function setChangesOnProfile() {
-  informationArray[0].name = editUserNameInpt.value;
-  informationArray[0].preview = editAboutInpt.value;
-  informationArray[0].username = editUserNameInpt.value;
-  setProfileInformation(informationArray[0]);
+  if (editAboutInpt.value !== "" && editUserNameInpt.value !== "") {
+    informationArray[0].name = editUserNameInpt.value;
+    informationArray[0].preview = editAboutInpt.value;
+    informationArray[0].username = editUserNameInpt.value;
+    setProfileInformation(informationArray[0]);
+  } else {
+    alert("Please fill the inputs :))");
+  }
 }
 //show edit
 function showEditWrapper() {
