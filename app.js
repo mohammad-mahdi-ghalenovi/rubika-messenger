@@ -157,7 +157,9 @@ informationArray.forEach(function (info) {
 function createContactElements(info) {
   MainContactContainer.insertAdjacentHTML(
     "beforeend",
-    '<div class="contact-elem"><div class="clickME"></div><div class="contact-profile" style="background-image: ' +
+    '<div class="contact-elem"><div class="clickME" onclick="findTargetElem(' +
+      info.id +
+      ')"></div><div class="contact-profile" style="background-image: ' +
       info.src +
       '  "></div><div class="contact-informations"><div class="contact-name">' +
       info.name +
@@ -171,26 +173,12 @@ function createContactElements(info) {
   );
 }
 
-// click contacts Handler
-clickElem = document.querySelectorAll(".clickME");
+function findTargetElem(infoId) {
+  mainUser = informationArray.find(function (user) {
+    return user.id == infoId;
+  });
 
-let targetClickedArray;
-let targetClickId;
-let activeElem;
-clickElem.forEach(function (event) {
-  event.addEventListener("click", setActiveClass);
-});
-
-function setActiveClass(item) {
-  activeElem = document.querySelector(".active");
-  activeElem.classList.remove("active");
-  item.target.classList.add("active");
-
-  targetClickId = item.target.id;
-  targetClickedArray = informationArray[targetClickId - 1];
-
-  setProfileInformation(targetClickedArray);
-  loadingHandler();
+  setProfileInformation(mainUser);
 }
 
 function setProfileInformation(targetClickedArray) {
@@ -207,6 +195,7 @@ function setProfileInformation(targetClickedArray) {
   chatProfileElem.style.backgroundImage = "url(" + targetClickedArray.src + ")";
 
   changeSlider(targetClickedArray);
+  loadingHandler();
 }
 
 //profile slider
@@ -440,8 +429,7 @@ function nxtSlideHandler() {
   if (sildeCounter > profileImgsArray.length - 1) {
     sildeCounter = 0;
   }
-  let nowImg = profileImgsArray[sildeCounter];
-  profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
+  setSliderImgs(sildeCounter);
 }
 
 function perSlideHandler() {
@@ -449,6 +437,10 @@ function perSlideHandler() {
   if (sildeCounter < 0) {
     sildeCounter = profileImgsArray.length - 1;
   }
+  setSliderImgs(sildeCounter);
+}
+
+function setSliderImgs(sildeCounter) {
   let nowImg = profileImgsArray[sildeCounter];
   profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
 }
