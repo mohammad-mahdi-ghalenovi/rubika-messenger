@@ -306,4 +306,17 @@
   .contact-unRead {
     right: -1.1%;
   }
+
+  .contact-name {
+    font-size: 14px;
+  }
+
+  .contact-preview {
+    font-size: 12px;
+  }
+
+  .contact-container .contact-profile {
+    height: 50px;
+    width: 50px;
+  }
 }

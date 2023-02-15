@@ -22,7 +22,7 @@ let informationArray = [
     active: "active",
     sliders: ["imgs/img1.jpg", "imgs/img2.jpg"],
     bio: "always on top",
-    messageCount: "",
+    messageCount: 0 + "0",
   },
   {
     id: 2,
