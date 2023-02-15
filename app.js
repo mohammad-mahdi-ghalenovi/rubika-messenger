@@ -12,6 +12,7 @@ let i = 0;
 let clickElem = document.querySelectorAll(".clickME");
 let informationArray = [
   {
+    id: 1,
     name: "SavedMessages",
     profile: "#2233",
     preview: "",
@@ -24,6 +25,7 @@ let informationArray = [
     messageCount: "",
   },
   {
+    id: 2,
     name: "Mahyar",
     profile: "#2244",
     preview: "lorem ipusm salama",
@@ -35,6 +37,7 @@ let informationArray = [
     messageCount: 20,
   },
   {
+    id: 3,
     name: "Yasin",
     profile: "#9399",
     preview: "lorem ipusm salama",
@@ -46,6 +49,7 @@ let informationArray = [
     messageCount: 20,
   },
   {
+    id: 4,
     name: "Ali ",
     profile: "#2422",
     preview: "lorem ipusm salama",
@@ -146,55 +150,25 @@ function createMessage() {
 }
 
 // dynamic contactElem
-let idCounter = 0;
 informationArray.forEach(function (info) {
-  idCounter++;
-  createContactElements(info, idCounter);
+  createContactElements(info);
 });
 
-function createContactElements(info, idCounter) { 
-  let newContactElemContainer = document.createElement("div");
-  newContactElemContainer.classList.add("contact-elem");
-
-  let newClickMe = document.createElement("div");
-  newClickMe.classList.add("clickME");
-  newClickMe.classList.add("" + info.active + "");
-
-  let newContactProfile = document.createElement("div");
-  newContactProfile.style.backgroundImage = "url(" + info.src + ")";
-  newContactProfile.classList.add("contact-profile");
-
-  let newInformationContainer = document.createElement("div"); //
-  newInformationContainer.classList.add("contact-informations");
-
-  let newContactName = document.createElement("div");
-  newContactName.textContent = info.name;
-  newContactName.classList.add("contact-name");
-
-  let newContactPreview = document.createElement("div"); //
-  newContactPreview.textContent = info.preview;
-  newContactPreview.classList.add("contact-preview");
-
-  let newContactUnread = document.createElement("div");
-  newContactUnread.textContent = info.messageCount;
-  newContactUnread.classList.add("contact-unRead");
-
-  let newContactTime = document.createElement("div");
-  newContactTime.textContent = time;
-  newContactTime.classList.add("time");
-
-  // apend
-  newContactElemContainer.append(
-    newClickMe,
-    newContactProfile,
-    newInformationContainer,
-    newContactUnread,
-    newContactTime
+function createContactElements(info) {
+  MainContactContainer.insertAdjacentHTML(
+    "beforeend",
+    '<div class="contact-elem"><div class="clickME"></div><div class="contact-profile" style="background-image: ' +
+      info.src +
+      '  "></div><div class="contact-informations"><div class="contact-name">' +
+      info.name +
+      '</div><div class="contpact-preview">' +
+      info.preview +
+      '</div></div><div class="contact-unRead">' +
+      info.messageCount +
+      '</div><div class="time">' +
+      time +
+      "</div></div>"
   );
-  newInformationContainer.append(newContactName, newContactPreview);
-  MainContactContainer.append(newContactElemContainer);
-
-  newClickMe.id = idCounter;
 }
 
 // click contacts Handler
