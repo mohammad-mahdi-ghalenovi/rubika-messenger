@@ -161,7 +161,7 @@
 
 .contact-unRead {
   position: absolute;
-  right: 2%;
+  right: -1.2%;
   top: 60%;
   transform: translate(-50%, -50%);
   background-color: var(--purple-theme);
@@ -299,7 +299,24 @@
 }
 
 @media screen and (max-width: 1470px) {
-  .time {
-    right: 5px;
+  .contact-container {
+    width: 370px;
+  }
+
+  .contact-unRead {
+    right: -1.1%;
+  }
+
+  .contact-name {
+    font-size: 14px;
+  }
+
+  .contact-preview {
+    font-size: 12px;
+  }
+
+  .contact-container .contact-profile {
+    height: 50px;
+    width: 50px;
   }
 }

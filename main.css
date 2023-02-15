@@ -11,7 +11,7 @@
 body {
   overflow-y: hidden;
   overflow-x: hidden;
-  zoom: 0.90;
+  zoom: 0.9;
 }
 
 :root {
@@ -39,41 +39,10 @@ body {
 }
 
 @media screen and (max-width: 1470px) {
+  body {
+    zoom: 0.8;
+  }
   .main-container {
     grid-template-columns: 370px repeat(1, 1fr);
-  }
-
-  .contact-container .contact-profile {
-    height: 49px;
-    width: 49px;
-  }
-  .contact-container .contact-informations {
-    padding: 5px;
-  }
-  .contact-name {
-    font-size: 15px;
-  }
-  .contact-preview {
-    font-size: 9px;
-  }
-  .chat-name {
-    font-size: 15px;
-  }
-  .chat-profile {
-    height: 38px;
-    width: 38px;
-  }
-  .message-inpt {
-    font-size: 15px;
-  }
-  .search-header input.search {
-    height: 36px;
-    width: 100%;
-    justify-self: center;
-    right: 14px;
-    margin-top: 12px;
-  }
-  .time {
-    padding-right: 2px;
   }
 }
