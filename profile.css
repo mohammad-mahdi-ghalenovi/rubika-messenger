@@ -182,6 +182,7 @@
 @media screen and (max-width: 1470px) {
   .profile-container {
     width: 390px;
+    height: 110%;
   }
   .profile-info div.info {
     font-size: 16px;

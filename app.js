@@ -163,7 +163,7 @@ function createContactElements(info) {
       info.src +
       '  "></div><div class="contact-informations"><div class="contact-name">' +
       info.name +
-      '</div><div class="contpact-preview">' +
+      '</div><div class="contact-preview">' +
       info.preview +
       '</div></div><div class="contact-unRead">' +
       info.messageCount +
