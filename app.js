@@ -429,8 +429,7 @@ function nxtSlideHandler() {
   if (sildeCounter > profileImgsArray.length - 1) {
     sildeCounter = 0;
   }
-  let nowImg = profileImgsArray[sildeCounter];
-  profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
+  setSliderImgs(sildeCounter);
 }
 
 function perSlideHandler() {
@@ -438,6 +437,10 @@ function perSlideHandler() {
   if (sildeCounter < 0) {
     sildeCounter = profileImgsArray.length - 1;
   }
+  setSliderImgs(sildeCounter);
+}
+
+function setSliderImgs(sildeCounter) {
   let nowImg = profileImgsArray[sildeCounter];
   profileImgContainer.style.backgroundImage = "url(" + nowImg + ")";
 }
