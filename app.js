@@ -205,6 +205,12 @@ function changeSlider(targetClickedArray) {
     "url(" + targetClickedArray.sliders[0] + ")";
 }
 
+function setSettingEdits(targetArray) {
+  setNumberElem.textContent = targetArray.num;
+  setNameElem.textContent = targetArray.name;
+  setBioElem.textContent = targetArray.bio;
+}
+
 // loading
 function loadingHandler() {
   loadingElem.style.opacity = 1;
@@ -406,9 +412,10 @@ function closeContextMenu() {
 function setChangesOnProfile() {
   if (editAboutInpt.value !== "" && editUserNameInpt.value !== "") {
     informationArray[0].name = editUserNameInpt.value;
-    informationArray[0].preview = editAboutInpt.value;
+    informationArray[0].bio = editAboutInpt.value;
     informationArray[0].username = editUserNameInpt.value;
     setProfileInformation(informationArray[0]);
+    setSettingEdits(informationArray[0]);
   } else {
     alert("Please fill the inputs :))");
   }
