@@ -106,7 +106,7 @@
 }
 
 .clickME {
-  position: absolute;
+  position: absolute; 
   height: 100%;
   width: 100%;
   z-index: 9;
@@ -125,7 +125,6 @@
   grid-column: 1/2;
   background-position: center;
   background-size: cover;
-  background-color: #a555ec;
   border-radius: 50%;
   height: 55px;
   width: 55px;
