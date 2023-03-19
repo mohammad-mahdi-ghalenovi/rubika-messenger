@@ -36,14 +36,19 @@
   border-radius: 50%;
   scale: 0.8;
   border: none;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-image: url(icons/icons8-multiply-35.png);
+  cursor: pointer;
 }
 
 /* img */
 .setting-img-container {
   grid-row: 2/3;
-  background-color: aqua;
   background-position: center;
   background-size: cover;
+  background-image: url(imgs/img1.jpg);
 }
 
 /* information */
@@ -68,14 +73,17 @@
   background-color: var(--hover-color);
 }
 
-.setting-info .info-icons {
+.info-icons {
   height: 50px;
   width: 50px;
-  background-color: var(--hover-color);
   border-radius: 50%;
+  background-color: transparent;
   grid-column: 2/3;
   grid-row: 1/2;
   align-self: center;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
 .setting-info .info {
@@ -126,10 +134,12 @@
 .buttons-icons {
   height: 50px;
   width: 50px;
-  background-color: var(--hover-color);
   border-radius: 50%;
   align-self: center;
   grid-column: 2/3;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1470px) {

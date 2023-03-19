@@ -89,6 +89,7 @@ let closeSettingBtn = document.querySelector(".close-setting");
 let setNumberElem = document.querySelector(".set-num");
 let setNameElem = document.querySelector(".set-name");
 let setBioElem = document.querySelector(".set-bio");
+let settingImgContainer = document.querySelector(".setting-img-container");
 
 //profile
 let profileContainerElem = document.querySelector(".profile-container");
@@ -159,9 +160,9 @@ function createContactElements(info) {
     "beforeend",
     '<div class="contact-elem"><div class="clickME" onclick="findTargetElem(' +
       info.id +
-      ')"></div><div class="contact-profile" style="background-image: ' +
-      info.src +
-      '  "></div><div class="contact-informations"><div class="contact-name">' +
+      ')"></div><div class="contact-profile" style="background-image: url(' +
+      info.sliders[0] +
+      ') "></div><div class="contact-informations"><div class="contact-name">' +
       info.name +
       '</div><div class="contact-preview">' +
       info.preview +
@@ -172,6 +173,10 @@ function createContactElements(info) {
       "</div></div>"
   );
 }
+
+// onload
+setProfileInformation(informationArray[0]);
+setSettingEdits(informationArray[0]);
 
 function findTargetElem(infoId) {
   mainUser = informationArray.find(function (user) {
@@ -192,7 +197,8 @@ function setProfileInformation(targetClickedArray) {
   }, 200);
 
   chatNameElem.textContent = targetClickedArray.name;
-  chatProfileElem.style.backgroundImage = "url(" + targetClickedArray.src + ")";
+  chatProfileElem.style.backgroundImage =
+    "url(" + targetClickedArray.sliders[0] + ")";
 
   changeSlider(targetClickedArray);
   loadingHandler();
@@ -207,7 +213,7 @@ function changeSlider(targetClickedArray) {
 
 function setSettingEdits(targetArray) {
   setNumberElem.textContent = targetArray.num;
-  setNameElem.textContent = targetArray.name;
+  setNameElem.textContent = targetArray.username;
   setBioElem.textContent = targetArray.bio;
 }
 
