@@ -89,6 +89,7 @@ let closeSettingBtn = document.querySelector(".close-setting");
 let setNumberElem = document.querySelector(".set-num");
 let setNameElem = document.querySelector(".set-name");
 let setBioElem = document.querySelector(".set-bio");
+let settingImgContainer = document.querySelector(".setting-img-container");
 
 //profile
 let profileContainerElem = document.querySelector(".profile-container");

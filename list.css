@@ -50,15 +50,19 @@
 
 .ham-btn {
   position: absolute;
+  height: 35px;
+  width: 35px;
   grid-column: 1/2;
   color: var(--dark-color);
   align-self: center;
   left: 20px;
   top: 12px;
   font-size: 28px;
-  rotate: 90deg;
   cursor: pointer;
   transition: 0.4s;
+  background-image: url(icons/icons8-menu-48.png);
+  background-size: auto;
+  background-position: center;
 }
 
 .animated-btn {
@@ -106,7 +110,7 @@
 }
 
 .clickME {
-  position: absolute; 
+  position: absolute;
   height: 100%;
   width: 100%;
   z-index: 9;
@@ -226,12 +230,15 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  background-color: var(--purple-theme);
+  /* background-color: var(--purple-theme); */
   right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
   margin-right: -5px;
   border-radius: 50%;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .details {

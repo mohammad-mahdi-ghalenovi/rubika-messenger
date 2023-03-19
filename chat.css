@@ -37,7 +37,9 @@
 
 .chat-search {
   grid-column: -3/-2;
-  background-color: red;
+  background-image: url(icons/icons8-search-35.png);
+  background-size: auto;
+  background-position: center;
   border-radius: 50%;
   height: 40px;
   width: 40px;
@@ -47,7 +49,9 @@
 }
 
 .chat-ham {
-  background-color: yellow;
+  background-image: url(icons/icons8-menu-48.png);
+  background-size: auto;
+  background-position: center;
   border-radius: 50%;
   height: 40px;
   width: 40px;
@@ -100,7 +104,6 @@
   position: absolute;
   height: 40px;
   width: 40px;
-  background-color: aqua;
   border-radius: 50%;
   z-index: 6;
   top: 8px;
@@ -109,10 +112,18 @@
 
 .message-file-btn {
   left: 10px;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-image: url(icons/icons8-winking-document-35.png);
 }
 
 .message-emoji-btn {
   right: 10px;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-image: url(icons/icons8-tongue-out-35.png);
 }
 
 .messages {
@@ -164,13 +175,21 @@
   align-self: center;
   margin-left: 15px;
   z-index: 9;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-image: url(icons/icons8-telegram-app-35.png);
+  cursor: pointer;
 }
 
 .read-icon {
   position: absolute;
   height: 12px;
   width: 24px;
-  background-color: green;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-image: url(icons/icons8-done-35.png);
   border-radius: 20px;
   right: 4px;
   bottom: 2px;
