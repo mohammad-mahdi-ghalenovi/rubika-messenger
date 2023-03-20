@@ -148,6 +148,8 @@ function createMessage() {
     console.log(messagesElem.scrollHeight);
     messagesElem.scrollTo(0, messagesElem.scrollHeight);
   }
+
+  messageInpt.value = "";
 }
 
 // dynamic contactElem
